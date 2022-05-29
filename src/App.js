@@ -9,6 +9,7 @@ function App() {
     <>
       <div>{double(number)}</div>
       <button>Sumbit</button>
+      <button>Btn</button>
     </>
   );
 }
