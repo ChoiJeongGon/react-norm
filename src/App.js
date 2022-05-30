@@ -1,15 +1,14 @@
 function App() {
   const number = 1;
 
-  const double = (number) => {
-    return number *5;
+  const printHello = () => {
+    console.log('hello')
   };
 
   return(
     <>
-      <div>{double(number)}</div>
-      <button>Sumbit</button>
-      <button>Btn</button>
+      <button onClick={printHello}>Sumbit</button>
+      
     </>
   );
 }
