@@ -1,14 +1,21 @@
-function App() {
-  const number = 1;
+import { useState } from 'react';
 
-  const printHello = () => {
-    console.log('hello')
+function App() {
+  console.log('render');
+  const [number, setNumber] = useState(1);
+  const [number1, setNumber1] = useState(1);
+  const double = () => {
+    const doubleNumber = number * 2;
+    setNumber(doubleNumber);
+    setNumber(number1 *2);
+    console.log(doubleNumber);
   };
 
-  return(
+  return (
     <>
-      <button onClick={printHello}>Sumbit</button>
-      
+      <div>{number}</div>
+      <div>{number1}</div>
+      <button onClick={double}>Sumbit</button>
     </>
   );
 }
