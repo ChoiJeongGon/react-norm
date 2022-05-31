@@ -5,9 +5,9 @@ function App() {
   const [number, setNumber] = useState(1);
   const [number1, setNumber1] = useState(1);
   const double = () => {
-    const doubleNumber = number * 2;
+    const doubleNumber = number * 3;
     setNumber(doubleNumber);
-    setNumber(number1 *2);
+    setNumber1(number1 *3);
     console.log(doubleNumber);
   };
 
