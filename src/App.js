@@ -6,7 +6,7 @@ function App() {
   const double = () => {
     // const doubleNumber = number * 2;
     setNumber((prevState) => prevState *2);
-    
+
     setNumber((prevState) => {
       return prevState *2
     });
@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <div>{number}</div>
-      <button onClick={double}>Sumbit</button>
+      <button className="btn btn-primary" onClick={double}>Sumbit</button>
     </>
   );
 }
