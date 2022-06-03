@@ -6,6 +6,8 @@ function App() {
   const double = () => {
     // const doubleNumber = number * 2;
     setNumber((prevState) => prevState *2);
+    
+    setNumber((prevState) => prevState *2);
 
     setNumber((prevState) => {
       return prevState *2
