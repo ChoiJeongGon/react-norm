@@ -1,19 +1,21 @@
 import { useState } from 'react';
-
 function App() {
-  console.log('render');
-  const [number, setNumber] = useState(1);
-  const double = () => {
-    // const doubleNumber = number * 2;
-    setNumber((prevState) => prevState *2);
-    setNumber((prevState) => prevState *2);
-  };
+  const [title, setTitle] = useState('');
 
   return (
-    <>
-      <div>{number}</div>
-      <button className="btn btn-primary" onClick={double}>Sumbit</button>
-    </>
+    <div className="container">
+      <div className="mb-3">
+        <label className="form-label">Title</label>
+        <input 
+        className="form-control"
+        value={title}
+        onChange={(event) => {
+          setTitle(event.target.value);
+        }}
+        />
+      </div>
+      <button className="btn btn-primary">Post</button>
+    </div>
   );
 }
 
