@@ -16,10 +16,10 @@ function App() {
     <Router>
       <div>
         <Link to="/">Home</Link>
-        <Link to="/blogs">Blogs</Link>
+        <Link to="/blogs">Blog</Link>
       </div>
       <Switch>
-        <Route path="/">Home</Route>
+        <Route path="/">Home Page</Route>
         <Route path="/blogs">
           <div className="container">
             <div className="mb-3">
