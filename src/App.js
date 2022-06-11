@@ -23,7 +23,7 @@ function App() {
           Home Page
         </Route>
         <Route path="/blogs">
-          < BlogForm/>
+          <BlogForm />
         </Route>
       </Switch>
     </div>
