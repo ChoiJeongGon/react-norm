@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import BlogForm from "./components/BlogForm";
 import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
 import CreatePage from "./pages/CreatePage";
