@@ -1,7 +1,13 @@
 import { useState } from "react";
 
+const heavyWork = () =>{
+  console.log('엄청 무거운 작업');
+  return ['홍길동', '길길']
+}
 function App() {
-  const [names, setNames] = useState(["홍길동", "길길"]);
+  const [names, setNames] = useState(()=>{
+    return heavyWork();
+  });
   const [input, setInput] = useState("");
 
   const handleInputChange = (e) => {
