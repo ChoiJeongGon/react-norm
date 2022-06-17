@@ -1,26 +1,27 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 function App() {
- const [time, setTime] = useState(1);
+  const [names, setNames] = useState(["홍길동", "길길"]);
+  const [input, setInput] = useState("");
 
- const handleClick = () => {
-  let newTime;
-  if (time >= 12){
-    newTime = 1;
-  }else{
-    newTime = time + 1;
-  }
-  setTime(newTime);
- };
- console.log('업데이트');
-
- return(
-  <div>
-    <span>현재 시각:{time}시각</span>
-    <button onClick={handleClick}>Update</button>
-  </div>
- )
-
+  const handleInputChange = (e) => {
+    setInput(e.target.value);
+  };
+  const handleleUpload = () => {
+    setNames((preState) => {
+      console.log('이전 state', preState);
+      return [input, ...preState];
+    });
+  };
+  return (
+    <div>
+      <input type="text" value={input} onChange={handleInputChange} />
+      <button onClick={handleleUpload}>Upload</button>
+      {names.map((name, idx) => {
+        return <p key={idx}>{name}</p>;
+      })}
+    </div>
+  );
 }
 
 export default App;
