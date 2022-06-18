@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const heavyWork = () =>{
-  console.log('엄청 무거운 작업');
+
   return ['홍길동', '길길']
 }
 function App() {
