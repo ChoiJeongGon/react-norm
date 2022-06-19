@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const heavyWork = () =>{
 
-  return ['홍길동', '길길']
+  return ['홍길동']
 }
 function App() {
   const [names, setNames] = useState(()=>{
@@ -15,7 +15,7 @@ function App() {
   };
   const handleleUpload = () => {
     setNames((preState) => {
-      
+
       return [input, ...preState];
     });
   };
