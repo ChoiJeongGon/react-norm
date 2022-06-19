@@ -15,7 +15,7 @@ function App() {
   };
   const handleleUpload = () => {
     setNames((preState) => {
-      console.log('이전 state', preState);
+      
       return [input, ...preState];
     });
   };
