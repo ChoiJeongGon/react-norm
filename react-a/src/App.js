@@ -1,9 +1,5 @@
 import { useState } from "react";
 
-const heavyWork = () =>{
-
-  return ['홍길동']
-}
 function App() {
   const [names, setNames] = useState(()=>{
     return heavyWork();
