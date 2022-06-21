@@ -5,7 +5,7 @@ function App() {
   const [count, setCount] = useState(1);
 
   const handleCountUpdate = () => {
-
+      setCount(count + 1);
   };
 
   return(
