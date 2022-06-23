@@ -1,14 +1,18 @@
-import React, { useState, useEffect } from "react";
-import Timer from "./component/Timer";
+import React, { useState} from "react";
 
 function App() {
-  const [showTimer, setShowTimer] = useState(false);
-  return (
-    <div>
-      {showTimer && <Timer />}
-      <button onClick={() => setShowTimer(!showTimer)}>Toggle Timer</button>
-    </div>
-  );
-}
+    const [count, setCount] = useState(0);
+
+    const increaseCountState = () => {
+      setCount(count + 1);
+    };
+    
+    return(
+      <div>
+        <p>State: {count}</p>
+        <button onClick={increaseCountState}>State UP</button>
+      </div>
+    )
+  };
 
 export default App;
