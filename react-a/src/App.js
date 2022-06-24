@@ -1,21 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 
-const App = () => {
-  const [count, setCount] = useState(1);
-  const rederCount = useRef(1);
-
-  useEffect(() => {
-    rederCount.current = rederCount.current + 1;
-    console.log("렌더링 :", rederCount.current);
-  });
-
-
-  return (
+const App = () =>{
+  return(
     <div>
-      <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Up</button>
+      <input type="text" placeholder="username"></input>
+      <button>Login</button>
     </div>
-  );
+  )
+
 };
 
 export default App;
