@@ -4,7 +4,6 @@ const App = () =>{
   const inputRef = useRef()
 
   useEffect(() =>{
-   // console.log(inputRef);
    inputRef.current.focus();
   }, []);
 
