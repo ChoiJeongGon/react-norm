@@ -1,23 +1,9 @@
-import React, {useEffect, useRef} from "react";
+import React, {useState} from "react";
+import './App.css'
 
-const App = () =>{
-  const inputRef = useRef()
+function App() {
+  const [isDark, setIsDark] = useState(false);
 
-  useEffect(() =>{
-   inputRef.current.focus();
-  }, []);
-
-  const login = () => {
-    alert(`환영합니다 ${inputRef.current.value}!`);
-    inputRef.current.focus();
-  }
-  return(
-    <div>
-      <input ref={inputRef} type="text" placeholder="username"></input>
-      <button onClick={login}>Login</button>
-    </div>
-  )
-
-};
+}
 
 export default App;
